@@ -20,17 +20,19 @@ modprobe vboxguest failed
 The log file /var/log/vboxadd-setup.log may contain further information.
 
 **Solution on CentOS ->**
-yum install kernel-headers kernel-devel
-yum install -y gcc perl kernel-headers kernel-devel
-/sbin/rcvboxadd setup
+```yum install kernel-headers kernel-devel```
+```yum install -y gcc perl kernel-headers kernel-devel```
+```/sbin/rcvboxadd setup```
 
 
 
 **To copy files from host to vagrant vm add this line to your Vagrantfile --**
-config.vm.provision :file, source: "./hosts_to_copy", destination: "/tmp/"
+
+```config.vm.provision :file, source: "./hosts_to_copy", destination: "/tmp/"```
 
 **To run bootsrap file add this line to your Vagrantfile --**
-config.vm.provision :shell, path: "bootstrap.sh"
+
+```config.vm.provision :shell, path: "bootstrap.sh"```
 
 
 **To reload the Vagrant vm configuration after making changes to bootstrap file or file run this command -->**
@@ -41,11 +43,15 @@ https://phoenixnap.com/kb/vagrant-beginner-tutorial
 
 **To add secondary disk to a Vagrant box add this to Vagrantfile->**
 
+```
 node.vm.provider :virtualbox do |v|
-         **unless File.exist?(disk)
+         unless File.exist?(disk)
             v.customize ['createhd', '--filename', disk, '--variant', 'Fixed', '--size', 20 * 1024]
-         end**
-         **v.customize ['storageattach', :id,  '--storagectl', 'SATA Controller', '--port', 1, '--device', 0, '--type', 'hdd', '--medium', disk]**
+         end
+         v.customize ['storageattach', :id,  '--storagectl', 'SATA Controller', '--port', 1, '--device', 0, '--type', 'hdd', '--medium', disk]
 
-https://everythingshouldbevirtual.com/virtualization/vagrant-adding-a-second-hard-drive/
+      end
+```      
+
+Ref - https://everythingshouldbevirtual.com/virtualization/vagrant-adding-a-second-hard-drive
 
