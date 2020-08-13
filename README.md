@@ -23,3 +23,11 @@ Solution on CentOS ->
 yum install kernel-headers kernel-devel
 yum install -y gcc perl kernel-headers kernel-devel
 /sbin/rcvboxadd setup
+
+
+
+To copy files from host to vagrant vm add this line to your Vagrantfile --
+config.vm.provision :file, source: "./hosts_to_copy", destination: "/tmp/"
+
+To run bootsrap file add this line to your Vagrantfile --
+config.vm.provision :shell, path: "bootstrap.sh"
