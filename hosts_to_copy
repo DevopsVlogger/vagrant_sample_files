@@ -1,0 +1,15 @@
+172.42.42.100 kmaster.example.com kmaster
+172.42.42.101 kworker1.example.com kworker1
+172.42.42.102 kworker2.example.com kworker2
+192.168.56.105 ansible-controller ansible-controller.example.com
+192.168.56.107 ubutnu-server1 ubuntu-server1.example.com
+192.168.56.108 ubutnu-server2 ubuntu-server2.example.com
+192.168.56.109 centos7-server1 centos7-server1.example.com
+192.168.56.110 ubutnu-server3 ubuntu-server3.example.com www.virtual.host
+192.168.56.111    ceph-controller
+192.168.56.112    ceph-compute01
+192.168.56.113    ceph-compute02
+192.168.56.114    ceph-monitor
+172.42.42.200   kmaster-rj.example.com  kmaster-rj
+172.42.42.201   kworker-rj1.example.com kworker-rj1
+172.42.42.202   kworker-rj2.example.com kworker-rj2
