@@ -1,3 +1,5 @@
+This repository is to host sample vagrantfiles for different OS'es and the sample bootstrape files as well.
+
 *When you get errors like this -*
 
 VirtualBox Guest Additions: Starting.
