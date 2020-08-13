@@ -39,6 +39,7 @@ The log file /var/log/vboxadd-setup.log may contain further information.
 ```Vagrant reload --provision-with file,shell```
 
 https://www.vagrantup.com/docs/cli/reload
+
 https://phoenixnap.com/kb/vagrant-beginner-tutorial
 
 **To add secondary disk to a Vagrant box add this to Vagrantfile->**
